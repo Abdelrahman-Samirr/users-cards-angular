@@ -1,0 +1,31 @@
+<section>
+    <div class="container">
+        <div class="cards">
+
+            <div class="cards__left">
+                <div class="card" *ngFor="let user of usersLeft">
+                    <figure><img [src]='user.profilePicture' alt="user"></figure>
+                    <h4 [ngClass]="user.role">{{user.role}}</h4>
+                    <p><span>Username:</span> {{user.username}}</p>
+                    <p><span>Email:</span> {{user.email}}</p>
+                    <p><span>Phone:</span> {{user.phone}}</p>
+                    <p><span>Birthdate:</span> {{user.birthdate}}</p>
+                </div>
+            </div>
+
+            <div class="cards__right">
+                @for (user of usersRight; track user.role){
+                <div class="card">
+                    <figure><img [src]='user.profilePicture' alt="user"></figure>
+                    <h4 [ngClass]="user.role">{{user.role}}</h4>
+                    <p><span>Username:</span> {{user.username}}</p>
+                    <p><span>Email:</span> {{user.email}}</p>
+                    <p><span>Phone:</span> {{user.phone}}</p>
+                    <p><span>Birthdate:</span> {{user.birthdate}}</p>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>

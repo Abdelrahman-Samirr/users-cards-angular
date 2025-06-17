@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 51%;
+    margin: 0 auto;
+}
+
+.cards{
+    padding-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cards__left, .cards__right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(137, 137, 137, 0.322);
+    border-radius: 30px;
+    border: solid 2px rgba(0, 45, 171, 0.753);
+}
+
+figure{
+    width: 40%;
+    background-color: #ffff;
+    border: solid 2px rgba(0, 45, 171, 0.753);
+    border-radius: 50%;
+    overflow: hidden;   
+}
+
+img{
+    width: 100%;
+}
+
+%role{
+    padding: 4px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #ffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admin{
+    @extend %role;
+    background-color: rgba(255, 0, 0, 0.799);
+    padding: 4px 20px;
+}
+
+.moderate{
+    @extend %role;
+    background-color: rgba(255, 166, 0, 0.83);
+    
+}
+
+.user{
+    @extend %role;
+    background-color: rgba(0, 128, 0, 0.799);
+    padding: 4px 25px;
+}
+
+
+p{
+    font-weight: bold;
+}
+
+span{
+    color: rgb(154, 0, 0);
+}
